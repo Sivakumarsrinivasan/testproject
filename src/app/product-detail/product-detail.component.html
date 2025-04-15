@@ -1,39 +1,49 @@
-
-<div class="header-part">
-
-    <div class="search">
-        <input type="text" placeholder="Enter your search" [(ngModel)]="this.searchvalue" (keyup)="search($event)">
-       
-      
-    </div>
-    <div class="suggestion-box" >
-        <div class="list-item" *ngFor="let list of autosuggestionlist">
-<p (click)="itemchose(list.name)"> {{list.name}}</p>
+<div class="main">
+    <div class="advertisementpart"></div>
+    <div class="content-part">
+        <div class="header-part">
+            <div class="title-name">
+                <h1>Dress Collections</h1>
+            </div>
+           
+            <div class="search">
+                <input type="text" placeholder="Enter your search" [(ngModel)]="this.searchvalue" (keyup)="autosuggestbox()">             
+              
+            </div>
+            <div class="suggestion-box" >
+                <div class="list-item" *ngFor="let list of autosuggestionlist">
+        <p (click)="itemchose(list.name)"> {{list.name}}</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="grid-container" *ngIf="this.displaylist.length>0 else wrongcontent">
-    <div class="product-container"  *ngFor="let product of displaylist1(currentpage)">
-        <!-- <img class="categoryshowing"  [src]="product.category == 'veg' ? '../assets/button.png': '../assets/round.png'"> -->
+        <div class="grid-container" *ngIf="this.displaylist.length>0 else wrongcontent">
+            <div class="product-container"  *ngFor="let product of displaylist1(currentpage)">
+                <!-- <img class="categoryshowing"  [src]="product.category == 'veg' ? '../assets/button.png': '../assets/round.png'"> -->
+                
+                <img [src]="product.image_data" class="product-img">
+                <div class="product-name">
+                    <p>{{product.name}}</p>
+                </div>
+                <div class="detail-container">
+                    <div class="price">
+                        Price:
+                        ₹{{product.price}}
+                    </div> 
+                    <div class="size">Available :{{product.quantity}}</div>
+                
+                </div>
+               
+            
+            </div>
+        </div>
+        <ng-template #wrongcontent>
+            <div class="wrong-container">
+                <h3>Sorry search result is not found</h3>
+            </div>
         
-        <img [src]="product.image_data" class="product-img">
-        <div class="product-name">
-            <h6>{{product.name}}</h6>
-        </div>
-        <div class="price">
-            ₹{{product.price}}
-        </div> 
-    
-    
+        </ng-template>
     </div>
-</div>
-<ng-template #wrongcontent>
-    <div class="wrong-container">
-        <h3>Sorry search result is not found</h3>
+    <div class="button-part">
+        <button *ngFor="let btn of setpagination()" (click)="onpagechange(btn)">{{btn}}</button>
     </div>
-
-</ng-template>
-<div class="page_numbers">
-    <button (click)="onpagechange(page)" *ngFor="let page of setpagination()" >{{page}}</button>
 </div>
