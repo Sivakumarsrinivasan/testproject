@@ -12,7 +12,7 @@ export class ProductDetailComponent implements OnInit {
   }
   productlist: product[] = [
     {
-      price: 100,
+      price: 1000,
       image_data: 'assets/Aline.jpg',
       rating: 3,
       id: 0,
@@ -21,7 +21,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 200,
+      price: 1200,
       image_data: 'assets/maxi.jpg',
       rating: 2,
       id: 1,
@@ -30,7 +30,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 800,
       image_data: 'assets/bodycon.jpg',
       rating: 3,
       id: 2,
@@ -39,7 +39,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 400,
+      price: 900,
       image_data: 'assets/tuxedo.jpg',
       rating: 3,
       id: 3,
@@ -48,7 +48,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 500,
+      price: 1500,
       image_data: 'assets/suit.jpg',
       rating: 5,
       id: 4,
@@ -57,7 +57,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 600,
+      price: 2600,
       image_data: 'assets/Blazer.jpg',
       rating: 3,
       id: 5,
@@ -66,7 +66,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 400,
+      price: 1500,
       image_data: 'assets/kurta.jpg',
       rating: 3,
       id: 6,
@@ -75,7 +75,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 3000,
       image_data: 'assets/pyjama.jpg',
       rating: 3,
       id: 7,
@@ -84,7 +84,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 1200,
       image_data: 'assets/sherwani.jpg',
       rating: 3,
       id: 7,
@@ -93,7 +93,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 1300,
       image_data: 'assets/wrap.jpg',
       rating: 3,
       id: 7,
@@ -102,7 +102,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 700,
       image_data: 'assets/peplum.jpg',
       rating: 3,
       id: 7,
@@ -111,7 +111,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 900,
       image_data: 'assets/shift.jpg',
       rating: 3,
       id: 7,
@@ -120,7 +120,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 900,
       image_data: 'assets/polo.jpg',
       rating: 3,
       id: 8,
@@ -129,7 +129,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 2000,
       image_data: 'assets/leatherjacket.jpg',
       rating: 3,
       id: 8,
@@ -138,7 +138,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 1000,
       image_data: 'assets/Denim.jpg',
       rating: 3,
       id: 8,
@@ -147,7 +147,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 800,
       image_data: 'assets/Baggy.jpg',
       rating: 3,
       id: 8,
@@ -156,7 +156,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 900,
       image_data: 'assets/HighWaisted.jpg',
       rating: 3,
       id: 8,
@@ -165,7 +165,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 600,
       image_data: 'assets/H&m.jpg',
       rating: 3,
       id: 8,
@@ -174,7 +174,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 1000,
       image_data: 'assets/veshti.jpg',
       rating: 3,
       id: 8,
@@ -183,7 +183,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 600,
       image_data: 'assets/saree.jpg',
       rating: 3,
       id: 8,
@@ -192,7 +192,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 900,
       image_data: 'assets/lehenga.jpg',
       rating: 3,
       id: 8,
@@ -201,7 +201,7 @@ export class ProductDetailComponent implements OnInit {
       category: 1
     },
     {
-      price: 300,
+      price: 700,
       image_data: 'assets/chudithar.jpg',
       rating: 3,
       id: 8,

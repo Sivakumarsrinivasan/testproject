@@ -6,6 +6,33 @@
     height: 60%;
     width:100%;
     background: #714bae;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ad-image{
+    height: 75%;
+    width: 30%;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+.ad-image img{
+    height: 100%;
+    width: 100%;
+}
+.ad-content{
+    color: wheat;
+    height: 50%;
+    width: 50%;
+}
+.ad-content h1{
+    font-family: cursive;
+}
+.ad-content p{
+    margin-top: 4%;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 .header-part{
     height: auto;
@@ -129,7 +156,9 @@ button{
 .title-name{
     display: flex;
     justify-content: center;
-    font-family: cursive;
+    font-family: serif;
+    color: magenta;
+    font-weight: bold;
 }
 
 @media (max-width:1200px){
@@ -232,6 +261,23 @@ button{
         background: #e77c6b;
         box-shadow: 14px 10px 29px -8px rgba(0, 0, 0, 0.75);
     }
+    .ad-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ad-content p{
+        margin-top: 4%;
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+    .ad-image{
+        height: 40%;
+        width: 40%;
+        object-fit: contain;
+        border-radius: 20px;
+    
+    }
     .button-part {
         height: 8%;
         width: 60%;
@@ -244,7 +290,7 @@ button{
     }
     .search{
         border: 1px solid black;
-    height: 40px;
+    height: 35px;
     border-radius: 15px;
     padding-left: 16px;
     display: flex
@@ -274,7 +320,7 @@ button{
         font-size: 18px;
     }
     .title-name{
-        font-size: 16px;
-        padding-bottom: 2%;
+        font-size: 14px;
+        padding-bottom: 3%;
     }
 }
