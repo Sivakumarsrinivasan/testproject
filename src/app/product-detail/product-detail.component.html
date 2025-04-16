@@ -2,7 +2,7 @@
     <div class="advertisementpart">
         <div class="ad-content">
             <h1>Hurry up!!!</h1>
-        <p>Grab your collection and make your vibe</p>
+            <p>Grab your collection and make your vibe</p>
         </div>
         <div class="ad-image">
             <img src="assets/Sale.jpg">
@@ -13,21 +13,20 @@
             <div class="title-name">
                 <h1>Dress Collections</h1>
             </div>
-           
+
             <div class="search">
-                <input type="text" placeholder="Enter your search" [(ngModel)]="this.searchvalue" (keyup)="autosuggestbox()" (ngModelChange)="search()">             
-              
+                <input type="text" placeholder="Enter your search" [(ngModel)]="this.searchvalue"
+                    (keyup)="autosuggestbox()" (ngModelChange)="search()">
+
             </div>
-            <div class="suggestion-box" >
+            <div class="suggestion-box">
                 <div class="list-item" *ngFor="let list of autosuggestionlist">
-        <p (click)="itemchose(list.name)"> {{list.name}}</p>
+                    <p (click)="itemchose(list.name)"> {{list.name}}</p>
                 </div>
             </div>
         </div>
         <div class="grid-container" *ngIf="this.displaylist.length>0 else wrongcontent">
-            <div class="product-container"  *ngFor="let product of displaylist1(currentpage)">
-                <!-- <img class="categoryshowing"  [src]="product.category == 'veg' ? '../assets/button.png': '../assets/round.png'"> -->
-                
+            <div class="product-container" *ngFor="let product of displaylist1(currentpage)">
                 <img [src]="product.image_data" class="product-img">
                 <div class="product-name">
                     <p>{{product.name}}</p>
@@ -36,22 +35,23 @@
                     <div class="price">
                         Price:
                         ₹{{product.price}}
-                    </div> 
+                    </div>
                     <div class="size">Available :{{product.quantity}}</div>
-                
+
                 </div>
-               
-            
+
+
             </div>
         </div>
         <ng-template #wrongcontent>
             <div class="wrong-container">
                 <h3>Sorry search result is not found</h3>
             </div>
-        
+
         </ng-template>
     </div>
     <div class="button-part">
-        <button *ngFor="let btn of setpagination()" [ngClass]="btn==this.currentpage?'active':'nonactive'" (click)="onpagechange(btn)">{{btn}}</button>
+        <button *ngFor="let btn of setpagination()" [ngClass]="btn==this.currentpage?'active':'nonactive'"
+            (click)="onpagechange(btn)">{{btn}}</button>
     </div>
 </div>

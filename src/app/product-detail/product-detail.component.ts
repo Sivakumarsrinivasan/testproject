@@ -217,6 +217,7 @@ export class ProductDetailComponent implements OnInit {
   currentpage: number = 1;
   searchvalue: string = '';
 
+  //  Displays the suggestion box while typing in the input box 
   autosuggestbox() {
     if (this.searchvalue == '') {
       this.autosuggestionlist = []
@@ -225,34 +226,40 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  search() {
 
-    // console.log(this.searchvalue);
-    // this.displaylist = this.productlist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))
-    if(this.searchvalue == ''){
-      // this.autosuggestionlist =  []
+  //  while we clearing the input box at the time it shows old list as usual
+  search() {   
+    if (this.searchvalue == '') {
       this.assigninglist()
-    }else{
-      // this.autosuggestionlist =  this.productlist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))    
-    }
-
-
+    } 
   }
+
+
+  // Cloning the original list because need to perform filter operation so it doesn't affect the display list only purpose of showing
   assigninglist() {
     this.displaylist = JSON.parse(JSON.stringify(this.productlist));
   }
+
+
+  //  Display the list for their respective page
   displaylist1(page: any) {
     const start = this.row * (page - 1);
     const end = start + this.row
     return this.displaylist.slice(start, end)
   }
+
+  // Display the no of button according to the data list
   setpagination() {
     const page_count = Math.ceil(this.productlist.length / this.row)
     return Array.from({ length: page_count }, (_, i) => i + 1)
   }
+
+  // Display the page respective to the page number
   onpagechange(page: number) {
     this.currentpage = page
   }
+  
+  // Displaying the particular data only when click the data in Autosuggestion Box
   itemchose(name: string) {
     this.searchvalue = name;
     this.displaylist = this.displaylist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))
