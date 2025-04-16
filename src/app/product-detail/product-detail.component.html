@@ -7,7 +7,7 @@
             </div>
            
             <div class="search">
-                <input type="text" placeholder="Enter your search" [(ngModel)]="this.searchvalue" (keyup)="autosuggestbox()">             
+                <input type="text" placeholder="Enter your search" [(ngModel)]="this.searchvalue" (keyup)="autosuggestbox()" (ngModelChange)="search()">             
               
             </div>
             <div class="suggestion-box" >
@@ -44,6 +44,6 @@
         </ng-template>
     </div>
     <div class="button-part">
-        <button *ngFor="let btn of setpagination()" (click)="onpagechange(btn)">{{btn}}</button>
+        <button *ngFor="let btn of setpagination()" [ngClass]="btn==this.currentpage?'active':'nonactive'" (click)="onpagechange(btn)">{{btn}}</button>
     </div>
 </div>

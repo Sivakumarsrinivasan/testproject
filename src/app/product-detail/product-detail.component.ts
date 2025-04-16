@@ -118,7 +118,98 @@ export class ProductDetailComponent implements OnInit {
       name: 'Shift dress',
       quantity: 50,
       category: 1
-    }
+    },
+    {
+      price: 300,
+      image_data: 'assets/polo.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Polo',
+      quantity: 170,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/leatherjacket.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Leather jacket',
+      quantity: 150,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/Denim.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Denim jeans',
+      quantity: 30,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/Baggy.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Baggy',
+      quantity: 40,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/HighWaisted.jpg',
+      rating: 3,
+      id: 8,
+      name: 'High Waisted',
+      quantity: 80,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/H&m.jpg',
+      rating: 3,
+      id: 8,
+      name: 'H&M',
+      quantity: 150,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/veshti.jpg',
+      rating: 3,
+      id: 8,
+      name: 'veshti shirt',
+      quantity: 400,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/saree.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Saree',
+      quantity: 350,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/lehenga.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Lehenga',
+      quantity: 150,
+      category: 1
+    },
+    {
+      price: 300,
+      image_data: 'assets/chudithar.jpg',
+      rating: 3,
+      id: 8,
+      name: 'Chudithar',
+      quantity: 150,
+      category: 1
+    },
+
   ];
   displaylist: product[] = [];
   autosuggestionlist: product[] = [];
@@ -134,18 +225,19 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  // search() {
+  search() {
 
-  //   console.log(this.searchvalue);
-  //   this.displaylist = this.productlist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))
-  //   if(this.searchvalue == ''){
-  //     this.autosuggestionlist =  []
-  //   }else{
-  //     this.autosuggestionlist =  this.productlist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))    
-  //   }
+    // console.log(this.searchvalue);
+    // this.displaylist = this.productlist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))
+    if(this.searchvalue == ''){
+      // this.autosuggestionlist =  []
+      this.assigninglist()
+    }else{
+      // this.autosuggestionlist =  this.productlist.filter((data) => data.name.toLowerCase().includes(this.searchvalue.toLowerCase()))    
+    }
 
 
-  // }
+  }
   assigninglist() {
     this.displaylist = JSON.parse(JSON.stringify(this.productlist));
   }
@@ -155,7 +247,7 @@ export class ProductDetailComponent implements OnInit {
     return this.displaylist.slice(start, end)
   }
   setpagination() {
-    const page_count = Math.ceil(8 / this.row)
+    const page_count = Math.ceil(this.productlist.length / this.row)
     return Array.from({ length: page_count }, (_, i) => i + 1)
   }
   onpagechange(page: number) {

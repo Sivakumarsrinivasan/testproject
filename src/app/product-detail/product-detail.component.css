@@ -3,7 +3,7 @@
     height: 100vh;
 }
 .advertisementpart{
-    height: 50%;
+    height: 60%;
     width:100%;
     background: #714bae;
 }
@@ -42,10 +42,11 @@
 .suggestion-box{
     height: auto;
     /* left: 42%; */
-    left: 68%;
+    left: 70%;
     position: absolute;
     width: 21%;
     background: #ff6f91;
+
     border-radius: 10px;
 }
 
@@ -68,8 +69,8 @@ padding-top:2%;
     padding-bottom: 2%;
 }
 .product-container {
-    width: 90%;
-    height: 525px;
+    width: 70%;
+    height: 425px;
     box-sizing: border-box;
     border-radius: 1.5em;
     display: flex
@@ -108,6 +109,7 @@ padding-top:2%;
 ;
     align-items: center;
     justify-content: space-around;
+    margin-left: 50%;
 }
 button{
     padding: 15px;
@@ -116,4 +118,163 @@ button{
     outline: none;
     background:#e77c6b;
     cursor: pointer;
+    color: white;
+}
+.active{
+    background: red;
+}
+.nonactive{
+    background-color: none;
+}
+.title-name{
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
+
+@media (max-width:1200px){
+    .grid-container {
+        height: auto;
+        overflow: hidden;
+        display: grid;
+    padding-top:2%;
+        grid-template-columns: 40% 40% ;
+        grid-gap: 40px;
+        justify-content: center;
+        margin-top: 3%;
+        padding-bottom: 2%;
+    }
+    .button-part{
+        height: 8%;
+        width: 24%;
+        display: flex
+    ;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 35%;
+        padding-top: 3%;
+    }
+}
+@media (max-width:900px){
+    .product-container {
+        width: 95%;
+        height: 400px;
+        box-sizing: border-box;
+        border-radius: 1.5em;
+        display: flex
+    ;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        background: #e77c6b;
+        box-shadow: 14px 10px 29px -8px rgba(0, 0, 0, 0.75);
+    }
+}
+@media(max-width:700px){
+    .grid-container {
+        height: auto;
+        overflow: hidden;
+        display: grid;
+    padding-top:2%;
+        grid-template-columns: 55% ;
+        grid-gap: 40px;
+        justify-content: center;
+        margin-top: 3%;
+        padding-bottom: 2%;
+    }
+    .button-part {
+        height: 8%;
+        width: 45%;
+        display: flex
+;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 25%;
+        padding-top: 3%;
+    }
+    .search{
+        border: 1px solid black;
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 16px;
+    display: flex
+;
+    align-items: center;
+    margin-left: 45%;
+    width: 50%;
+    }
+    .title-name{
+        font-size: 16px;
+    }
+}
+@media(max-width:575px){
+    .grid-container {
+        height: auto;
+        overflow: hidden;
+        display: grid;
+    padding-top:2%;
+        grid-template-columns: 75% ;
+        grid-gap: 40px;
+        justify-content: center;
+        margin-top: 3%;
+        padding-bottom: 2%;
+    }
+    .product-container {
+        width: 100%;
+        height: 370px;
+        box-sizing: border-box;
+        border-radius: 1.5em;
+        display: flex
+    ;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        background: #e77c6b;
+        box-shadow: 14px 10px 29px -8px rgba(0, 0, 0, 0.75);
+    }
+    .button-part {
+        height: 8%;
+        width: 60%;
+        display: flex
+;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 20%;
+        padding-top: 3%;
+    }
+    .search{
+        border: 1px solid black;
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 16px;
+    display: flex
+;
+    align-items: center;
+    margin-left: 40%;
+    width: 50%;
+    }
+    .suggestion-box {
+        height: auto;
+        left: 40%;
+        position: absolute;
+        width: 48%;
+        background: #ff6f91;
+        border-radius: 10px;
+    }
+    .list-item{
+        font-size: 16px;
+    }
+    .product-img{
+        height: 70%;
+    }
+    .detail-container{
+        font-size: 16px;
+    }
+    .product-container{
+        font-size: 18px;
+    }
+    .title-name{
+        font-size: 16px;
+        padding-bottom: 2%;
+    }
 }
